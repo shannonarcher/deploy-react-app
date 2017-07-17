@@ -48,14 +48,14 @@ git push live master
 ## add records to digital ocean
 Add an `A` record and direct to the droplet.
 ```
-HOSTNAME: {SUBDOMAIN}.{DOMAIN}.{TLD}
+HOSTNAME: {SUBDOMAIN}
 WILL DIRECT TO: {DROPLET}
 ```
 
 Create a `CNAME` record and alias for the `A` record you've just created.
 ```
 HOSTNAME: *.{SUBDOMAIN}
-IS AN ALIAS OF: {SUBDOMAIN}.{DOMAIN}.{TLD}
+IS AN ALIAS OF: {SUBDOMAIN}.{DOMAIN}.{TLD}.
 ```
 
 ## create new site in nginx
