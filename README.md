@@ -91,6 +91,6 @@ app.listen({PORT});
 
 ## set service to run
 ```
-pm2 start /root/{REPO}/app.js
+pm2 start /root/{SITE}/app.js
 pm2 save
 ```
