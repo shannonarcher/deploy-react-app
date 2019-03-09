@@ -18,10 +18,10 @@ cat > hooks/post-receive
 Paste the following while substituting {VARIABLES} with your own:
 ```
 #!/bin/sh
-export GIT_WORK_TREE="{SITE_ABSOLUTE_PATH}"
+export GIT_WORK_TREE="{SITE_ABSOLUTE_PATH}" # e.g. /root/cms
 export NODE_VERSION="6.11"
 
-git --work-tree="$GIT_WORK_TREE" --git-dir={REPO_ABSOLUTE_PATH} checkout -f
+git --work-tree="$GIT_WORK_TREE" --git-dir={REPO_ABSOLUTE_PATH} checkout -f # e.g. /root/cms.git
 
 . $HOME/.nvm/nvm.sh
 nvm install $NODE_VERSION
